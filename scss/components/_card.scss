@@ -13,7 +13,7 @@
     height: 25rem;
     transform-style: preserve-3d;
     border: 2px solid $borderColor;
-    transition: box-shadow 1s,transform 2s;
+    transition: box-shadow 1s,transform 1.5s cubic-bezier(0.65, 0.07, 0, 1.32);
   }
   &__item--active{
     transform: rotateY(180deg);
@@ -24,12 +24,15 @@
     height: 100%;
     object-fit: cover;
   }
+  &__picture{
+    height: 70%;
+    width: 100%;
+  }
 
   &__front{
     position: absolute;
     width: 100%;
     height: 100%;
-    color: #fff;
     backface-visibility: hidden;
   }
 
@@ -39,15 +42,42 @@
     height: 100%;
     color: #fff;
     padding:  2em 1em;
-    background: green;
-    // transform: rotateY(180deg);
+    background: var(--gray-color);
   }
   &__btn{
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
+    align-self: flex-end;
     cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    color: hsl(200 , 100% , 50%);
 
+  }
+  &__content{
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 1em;
+  }
+  &__footer{
+    background: #fff;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  &__title{
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  &__link{
+    color: hsl(200 , 100% , 50%);
   }
 
   @include rwd(medium){

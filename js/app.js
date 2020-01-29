@@ -29,7 +29,6 @@ toggles.forEach((el,i)=>{
         }
       }else{
         iter=-1;
-        console.log('void');
       }
       iter ++;
     }
@@ -183,7 +182,6 @@ targets.forEach((el,i)=>{
       document.body.classList.add('modal__open');
       modal_backdrop.classList.add('modal__backdrop');
       document.body.appendChild(modal_backdrop);
-
     }
     if (toggle == 'card-animate') {
       menu.classList.toggle('card-animate__back--active');
@@ -192,7 +190,7 @@ targets.forEach((el,i)=>{
     if (toggle == 'card-flipped') {
       menu.classList.add('card-flipped__item--active');
       menu.addEventListener('click', (e)=>{
-        if (e.target.getAttribute('data-dismiss')!=null) {
+        if (e.target.getAttribute('data-dismiss')!=null ||  e.target.parentElement.getAttribute('data-dismiss') != null) {
           menu.classList.remove('card-flipped__item--active');
         }
       })

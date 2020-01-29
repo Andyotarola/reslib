@@ -1232,8 +1232,8 @@ button {
 
 .arrow-back {
   background-image: url(../icons/arrow-back.svg);
-  width: 36px;
-  height: 36px; }
+  width: 20px;
+  height: 20px; }
 
 .btn--success {
   width: 8rem;
@@ -1934,18 +1934,20 @@ button {
     height: 25rem;
     transform-style: preserve-3d;
     border: 2px solid #DFE0E0;
-    transition: box-shadow 1s,transform 2s; }
+    transition: box-shadow 1s, transform 1.5s cubic-bezier(0.65, 0.07, 0, 1.32); }
   .card-flipped__item--active {
     transform: rotateY(180deg); }
   .card-flipped__img {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+  .card-flipped__picture {
+    height: 70%;
+    width: 100%; }
   .card-flipped__front {
     position: absolute;
     width: 100%;
     height: 100%;
-    color: #fff;
     backface-visibility: hidden; }
   .card-flipped__back {
     position: absolute;
@@ -1953,12 +1955,36 @@ button {
     height: 100%;
     color: #fff;
     padding: 2em 1em;
-    background: green; }
+    background: var(--gray-color); }
   .card-flipped__btn {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    cursor: pointer; }
+    align-self: flex-end;
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1em;
+    color: #00aaff; }
+  .card-flipped__content {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 1em; }
+  .card-flipped__footer {
+    background: #fff;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; }
+  .card-flipped__title {
+    padding: 1em 0;
+    text-align: center;
+    font-size: 1.2em; }
+  .card-flipped__link {
+    color: #00aaff; }
   @media screen and (min-width: 768px) {
     .card-flipped {
       width: 70%;
@@ -2026,10 +2052,10 @@ button {
   width: 100%;
   height: 100vh;
   z-index: var(--z-modal);
-  padding-right: 29px;
+  padding-right: 10px;
   padding-left: .5rem;
   padding-top: .5rem;
-  top: -100%;
+  top: -200%;
   transition: top .5s; }
   .modal__show {
     top: 0; }
@@ -2042,10 +2068,11 @@ button {
   .modal__dialog {
     position: relative;
     background: white;
-    max-height: 500px;
+    max-height: 65vh;
     overflow-y: auto;
     border-radius: 10px;
-    top: 10%; }
+    top: 5%;
+    width: 100%; }
   .modal__header {
     display: flex;
     justify-content: space-between;
@@ -2081,7 +2108,9 @@ button {
     .modal__dialog {
       width: 70%;
       left: 15%;
-      top: 30%; }
+      top: 20%;
+      max-height: 500px;
+      font-size: 1.05em; }
     .modal__img {
       height: 18.5rem; } }
   @media screen and (min-width: 1024px) and (max-width: 1200px) {
