@@ -1,0 +1,185 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+
+  <defs>
+
+    <style>
+
+      svg{
+        /* width: 64px; */
+      }
+
+      .location{
+        display: none;
+      }
+
+      .location:target{
+        display: block;
+      }
+
+      .upload{
+        display: none;
+      }
+      .upload:target{
+        display: block;
+      }
+
+      .download{
+        display: none;
+      }
+
+      .download:target{
+        display: block;
+      }
+
+      .horizontal{
+        display: none;
+      }
+
+      .horizontal:target{
+        display: block;
+      }
+
+      .vertical{
+        display: none;
+      }
+
+      .vertical:target{
+        display: block;
+      }
+      .menu_open{
+        display:none;
+      }
+      .menu_open:target{
+        display: block;
+      }
+      .menu_close{
+        display:none;
+      }
+      .menu_close:target{
+        display: block;
+      }
+      .arrow{
+        display:none;
+      }
+      .arrow:target{
+        display:block;
+      }
+      .lupa_zoom{
+        display:none;
+      }
+      .lupa_zoom:target{
+        display:block;
+      }
+
+    </style>
+
+  </defs>
+
+  <g id="location" class="location">
+
+    <path d="m18,44c-27.8,4,-20,15,12,15s40,-11,12,-15"
+      fill="none"
+      stroke="#000"
+      stroke-width="2"
+      stroke-linecap="round">
+    </path>
+
+    <path d="M29.8,54.8L45,32c24,-42.5,-54,-42.5,-30,0z
+             M 30 12 c 10 0 10 14 0 14 s -10 -14 0 -14"
+      >
+    </path>
+
+  </g>
+
+  <g id="upload" class="upload">
+    <path
+        d="
+        M 8 40 v 19 h 44 v -18 h -6 v 12 h -32 v -13 z
+        M 30 1 l 18 18 h -9 v 20 h -18 v -20 h -9 z
+        M 21 42 h 18 v 7 h -18 z
+        "
+        stroke-linejoin="round">
+    </path>
+  </g>
+
+  <g id="download" class="download">
+    <path
+        d="
+        M 8 40 v 19 h 44 v -18 h -6 v 12 h -32 v -13 z
+        M 30 49 l -18 -18 h 9 v -20 h 18 v 20 h 9 z
+        M 21 1 h 18 v 7 h -18 z
+        "
+        stroke-linejoin="round">
+
+    </path>
+  </g>
+
+  <g id="vertical" class="vertical">
+    <path
+        d="
+        M 30 6 l 0 48
+        "
+        stroke-width="10"
+        stroke-linecap="round"
+        >
+
+    </path>
+  </g>
+
+  <g id="horizontal" class="horizontal">
+    <path
+        d="
+        M 6 30 l 48 0
+        "
+        stroke-width="10"
+        stroke-linecap="round">
+
+    </path>
+  </g>
+
+  <g class="menu_open" id="menu_open">
+    <rect x="2" y="0" width="56" height="8"/>
+    <rect x="2" y="21" width="56" height="8"/>
+    <rect x="2" y="44" width="56" height="8"/>
+  </g>
+
+  <g class="menu_close" id="menu_close">
+
+    <path d="M20,20 L 40 40 M 40 20 L 20 40"
+      stroke="#fff"
+      stroke-width="3"
+      stroke-linecap="round"
+      fill="none">
+
+    </path>
+
+  </g>
+
+  <g class="arrow" id="arrow">
+    <path d="M25,20 L 40 30 M 40 30 L 25 40"
+      stroke="#fff"
+      stroke-width="10"
+      stroke-linecap="round"
+      fill="none">
+
+    </path>
+  </g>
+
+  <g class="lupa_zoom" id="lupa_zoom">
+
+    <circle cx="25" cy="25" r="22"
+      stroke="#fff" fill="none"
+      stroke-width="4"
+    />
+    <path
+      d="M 25 18  l 0 14 M 18 25 L 32 25 M 42 42 L 56 56"
+      stroke="#fff"
+      stroke-width="4"
+      stroke-linecap="round"
+      fill="none">
+    </path>
+
+  </g>
+
+
+</svg>

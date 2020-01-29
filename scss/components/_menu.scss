@@ -1,0 +1,148 @@
+.menu-left {
+  width: 100%;
+  position: fixed;
+  padding: 1.2em 12.5% 1em;
+  display: flex;
+  background: #fff;
+  z-index: var(--z-fixed);
+
+  &__title{
+    width: 15%;
+    padding: .2em;
+  }
+
+  &__nav{
+    width: 100%;
+  }
+  &__list--large{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: .2em;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__list--small{
+    display: none;
+  }
+
+  &__item{
+    position: relative;
+    font-weight: bold;
+  }
+
+  &__item:hover &__submenu{
+    display: flex;
+  }
+
+  &__submenu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+    z-index: var(--z-fixed);
+    background: #fff;
+  }
+  &__subitem{
+    font-weight: initial;
+    font-size: .9em;
+    position: relative;
+  }
+
+  &__link{
+    display: block;
+    width: 100%;
+    padding: .6em 2em;
+  }
+  &__link:hover{
+    color: hsl(200,100%,50%);
+  }
+  &__subitem:hover &__lastmenu{
+    display: flex;
+  }
+
+  &__lastmenu{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+    right: -100%;
+    top: -10%;
+    background: #fff;
+  }
+
+  @include rwd(0px , 1023px){
+    position: fixed;
+    padding:.2em 0;
+    justify-content: space-between;
+
+    &__title{
+      width: auto;
+    }
+    &__nav{
+      position: absolute;
+      background: #fff;
+      transform: translateX(-100%);
+      transition: transform .4s;
+      height: 100vh;
+      overflow-y: hidden;
+    }
+    &__list--large{
+      display: none;
+    }
+    &__list--small{
+      flex-direction: column;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      height: 100vh;
+      font-size: 1.5em;
+      overflow-y: auto;
+    }
+    &__active{
+      transform: translateX(0%) !important;
+    }
+
+    &__item{
+      position: static;
+      font-size:18px;
+      width: 100%;
+    }
+
+    &__submenu{
+      position: absolute;
+      transform: translatex(-100%);
+      background: #fff;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      top: 0%;
+      left: 0%;
+      transition: transform .4s;
+      font-size: inherit;
+      font-size: 18px;
+      overflow-y: auto;
+    }
+
+    &__link{
+      color: $darkColor;
+      border-bottom: 1px solid $darkColor;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__link:hover{
+      color: $darkColor;
+    }
+
+    &__subitem{
+      position: static;
+      font-size: 18px;
+    }
+  }
+
+}

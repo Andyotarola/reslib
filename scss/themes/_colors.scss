@@ -1,0 +1,32 @@
+.text--primary{
+  color: var(--primary-color);
+  &--Alt{
+    color: var(--primaryAlt-color);
+  }
+}
+
+.text--secondary{
+  color: var(--secondary-color);
+  &--Alt{
+    color: var(--secondaryAlt-color);
+  }
+}
+
+.text--third{
+  color: var(--third-color);
+  &--Alt{
+    color: var(--thirdAlt-color);
+  }
+}
+
+.text--bold{
+  font-weight: 900;
+}
+
+.text--lightness{
+  opacity: .6;
+}
+
+.text--white{
+  color: white;
+}

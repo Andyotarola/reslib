@@ -1,0 +1,83 @@
+$breakpoints:(
+  xsmall:320px,
+  small: 576px,
+  medium: 768px,
+  large : 1024px,
+  xlarge: 1200px
+);
+
+$buttonsColor:(
+  success: #28a745,
+  dark : #282D31,
+  primary: #0096f8,
+  secondary: #51cf8e,
+  third : #f56431d9,
+  danger: #dc3545,
+  warning: #ffc107,
+  info : #17a2b8,
+  gray: #545b62
+);
+
+$borderColor: #DFE0E0;
+$darkColor: #282D31;
+$textColor: #53575A;
+$darkColorAlt:#141618;
+
+:root{
+  --text-small:.88rem;
+  --text-medium:1.2rem;
+  --text-large:3rem;
+
+  @include rwd(medium){
+    --text-small:.95rem;
+    --text-medium:1.6rem;
+    --text-large:3.6rem;
+  }
+
+  @include rwd(large){
+    --text-small:1rem;
+    --text-medium:1.75rem;
+    --text-large:3.6rem;
+  }
+
+}
+
+:root{
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+:root{
+  --primary-color: #0096f8;
+  --primaryAlt-color:#0580d0;
+  --secondary-color:#51cf8e;
+  --secondaryAlt-color:#4fbc83;
+  --third-color: #f56431d9;
+  --thirdAlt-color:#e15c2dd9;
+  --dark-color:#53575A;
+  --danger-color:#dc3545;
+  --gray-color:#545b62;
+  --info-color:#17a2b8;
+  --warning-color:#ffc107;
+  --success-color:#28a745;
+}
+
+:root{
+  --h1-font-size: 1.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --body-font-size: .9rem;
+  --small-font-size: .75rem;
+  --button-size:.8rem;
+  @include rwd(large){
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.5rem;
+    --body-font-size: 1rem;
+    --small-font-size: .8rem;
+    --button-size:1rem;
+  }
+}

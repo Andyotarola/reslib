@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <g id="upload" class="upload">
+    <path
+        d="
+        M 8 40 v 19 h 44 v -18 h -6 v 12 h -32 v -13 z
+        M 30 1 l 18 18 h -9 v 20 h -18 v -20 h -9 z
+        M 21 42 h 18 v 7 h -18 z
+        "
+        stroke-linejoin="round">
+    </path>
+  </g>
+</svg>

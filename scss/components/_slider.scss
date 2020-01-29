@@ -1,0 +1,78 @@
+.slider{
+  width: 100%;
+  padding-top: 4em;
+  position: relative;
+  z-index: var(--z-back);
+  height: 40rem;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @include rwd(0px,576px){
+    height: 15rem;
+  }
+  @include rwd(576px,1024px){
+    height: 25rem;
+  }
+
+}
+
+[class^="slide-"]{
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: var(--z-back);
+}
+
+@for $i from 2 through 4{
+
+  .slide-#{$i}{
+    clip-path:polygon(0 0, 0 0, 0 100%, 0 100%);
+    animation: slide-#{$i} 32s infinite;
+  }
+
+}
+
+@keyframes slide-2{
+  0%,25%,60%{
+    clip-path:polygon(0 0, 0 0,0 100%, 0 100%);
+  }
+  30%,55%{
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+}
+
+
+@keyframes slide-3{
+  0%,45%{
+    clip-path:polygon(0 0, 0 0,0 100%, 0 100%);
+  }
+
+  50%,75%{
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  80%{
+    clip-path:polygon(0 0, 0 0,0 100%, 0 100%);
+  }
+
+}
+
+@keyframes slide-4{
+  0%,65%{
+    clip-path:polygon(0 0, 0 0,0 100%, 0 100%);
+  }
+
+  70%,95%{
+    clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  100%{
+    clip-path:polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+
+}

@@ -1,0 +1,46 @@
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: lato,sans-serif;
+  font-size: var(--body-font-size);
+  color: $textColor;
+}
+
+h1{
+  font-size: var(--h1-font-size);
+}
+
+h1,h2,h3,h4,h5,h6{
+  margin: 0;
+}
+
+ul, ol{
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+p{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+img{
+  max-width: 100%;
+}
+
+button{
+  cursor: pointer;
+}
+
+::selection{
+  color: #fff;
+  background: var(--secondary-color);
+  text-shadow: none;
+}

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+
+  <g id="location" class="location">
+
+    <path d="m18,44c-27.8,4,-20,15,12,15s40,-11,12,-15"
+      fill="none"
+      stroke="#000"
+      stroke-width="2"
+      stroke-linecap="round">
+    </path>
+
+    <path d="M29.8,54.8L45,32c24,-42.5,-54,-42.5,-30,0z
+             M 30 12 c 10 0 10 14 0 14 s -10 -14 0 -14"
+      >
+    </path>
+
+  </g>
+
+</svg>

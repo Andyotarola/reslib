@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+
+  <g class="lupa_zoom" id="lupa_zoom">
+
+    <circle cx="25" cy="25" r="22"
+      stroke="#fff" fill="none"
+      stroke-width="4"
+    />
+    <path
+      d="M 25 18  l 0 14 M 18 25 L 32 25 M 42 42 L 56 56"
+      stroke="#fff"
+      stroke-width="4"
+      stroke-linecap="round"
+      fill="none">
+    </path>
+
+  </g>
+
+</svg>

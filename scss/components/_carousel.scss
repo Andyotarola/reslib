@@ -1,0 +1,96 @@
+.carousel{
+
+  width: 100%;
+  height: 14rem;
+  position: relative;
+  overflow: hidden;
+
+  @include rwd(768px){
+    height: 24rem;
+  }
+  @include rwd(1024px){
+    height: 34rem;
+  }
+
+  &__item{
+    height: 100%;
+    flex-shrink:0;
+    position: relative;
+  }
+  &__img{
+    width: 100%;
+    height: 100%;
+  }
+
+  &__content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+  }
+
+  &__pagination{
+    position: absolute;
+    bottom: 2%;
+    width: 60%;
+    margin: 0 20%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pagination--item{
+    width: 8px;
+    height: 8px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 4px;
+    cursor: pointer;
+  }
+  &__pagination--active{
+    background: hsl(200, 100%, 50%);
+  }
+
+  %__before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    border-left: 5px solid #007aff;
+    border-bottom:5px solid #007aff;
+    border-radius: 4px;
+    display: block;
+
+  }
+  %__content{
+    position: absolute;
+    top: 45%;
+    width: 38px;
+    height: 38px;
+    @include rwd(0px,  768px){
+      width: 24px;
+      height: 24px;
+    }
+    cursor: pointer;
+  }
+
+  &__back{
+    @extend %__content;
+    left: 22px;
+  }
+
+  &__next{
+    @extend %__content;
+    right: 22px;
+  }
+  &__back:before{
+    @extend %__before;
+    transform: rotate(45deg);
+  }
+
+  &__next:before{
+    @extend %__before;
+    transform: rotate(225deg);
+  }
+
+}

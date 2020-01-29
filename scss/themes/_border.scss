@@ -1,0 +1,23 @@
+.border--default{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border: 1px solid $borderColor;
+}
+
+.border--primary{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border: 1px solid var(--primary-color);
+}
+
+.border--secondary{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border: 1px solid var(--secondary-color);
+}
+
+.boder--third{
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  border: 1px solid var(--third-color);
+}

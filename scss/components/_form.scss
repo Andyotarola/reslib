@@ -1,0 +1,162 @@
+.form-control{
+  width: 100%;
+  padding: .475rem .75rem;
+  border:1px solid #ced4da;
+  line-height: 1.5;
+  border-radius: .25rem;
+  outline: none;
+  font-family: sans-serif;
+  &:focus{
+    border-color: #80bdff;
+    box-shadow: 0 0 0 .3rem rgba(0,123,255,.25);
+  }
+
+  @each $key,$value in $buttonsColor{
+
+    &__#{$key}{
+      border-color: $value;
+      color: $value;
+    }
+    &__#{$key}:focus{
+      border-color: $value;
+      box-shadow: 0 0 0 .2rem lighten($value, 40%);
+    }
+
+  }
+
+}
+.form__label{
+  width: 35%;
+}
+
+.form-control__invalid{
+  color: map-get($buttonsColor, danger);
+}
+
+.form-checkbox{
+  &__label{
+    position: relative;
+    cursor: pointer;
+    font-size: 1rem;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    user-select: none;
+    padding: 0;
+  }
+
+  &__input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+
+  &__span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color:#fff;
+    border: 2px solid #5a5a5a;
+    cursor: pointer;
+  }
+
+  &__input:checked + &__span{
+    background-color: #26a69a;
+    border: none;
+  }
+
+  &__span:after{
+    content: "";
+    position: absolute;
+    display: none;
+    left: 9px;
+    top: 2px;
+    width: 8px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+  }
+
+  &__input:checked + &__span:after{
+    display: block;
+  }
+
+}
+
+
+.form-radio{
+  &__label{
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1rem;
+    margin-left: 35px;
+    padding: 0;
+
+  }
+
+  &__input{
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+
+  &__span{
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    background: white;
+    border-radius: 50%;
+    border: 1.5px #5a5a5a solid;
+    margin-left: .5rem;
+  }
+
+  &__input:checked + &__span{
+    background: #26a69a;
+    border: 1.5px #26a69a solid;
+  }
+
+  &__span:after{
+    content: "";
+    position: absolute;
+    display: none;
+    background: #26a69a;
+    top: 7%;
+    left: 7%;
+    width: 13px;
+    height: 14px;
+    border-radius: 50%;
+    border: white solid;
+  }
+
+  &__input:checked + &__span:after{
+    display: block;
+  }
+
+}
+
+.form-file{
+
+  &__input{
+    position: absolute;
+    z-index: var(--z-back);
+    left: 3%;
+    font-size: var(--button-size);;
+    @include rwd(large){
+      left: 6%;
+    }
+  }
+
+  &__label{
+    position: relative;
+  }
+
+
+}

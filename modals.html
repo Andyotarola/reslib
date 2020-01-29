@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Modal</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="col-sm-12 jc--center">
+      <button class="btn--primary ml-1" data-target="#modal1" data-toggle="modal">Modal 1</button>
+      <button class="btn--primary ml-1" data-target="#modal2" data-toggle="modal">Modal 2</button>
+    </div>
+  </div>
+
+  <div class="modal" id="modal1">
+
+    <div class="modal__dialog">
+
+      <div class="modal__header">
+        <div class="modal__title text--small">Modal1</div>
+        <span class="menu-close" data-dismiss="modal"></span>
+      </div>
+
+      <div class="modal__body">
+        <p class="text--lightness">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="modal__footer">
+        <button class="btn--primary" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="modal" id="modal2">
+
+    <div class="modal__dialog">
+
+      <div class="modal__header">
+        <div class="modal__title text--small">Modal 2</div>
+        <span class="menu-close" data-dismiss="modal"></span>
+      </div>
+
+      <div class="modal__body">
+        <p class="text--lightness">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      </div>
+
+      <div class="modal__footer">
+        <button class="btn--primary" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script type="text/javascript" src="./js/app.js"></script>
+
+</body>
+</html>

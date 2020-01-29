@@ -1,0 +1,41 @@
+ .menu-open{
+  background-image: url(../icons/menu-open.svg);
+  background-repeat: no-repeat;
+  width: 28px;
+  cursor: pointer;
+
+  @include rwd(large){
+    display: none;
+  }
+}
+
+.menu-close{
+  background-image: url(../icons/menu-close.svg);
+  width: 32px;
+  height: 32px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.arrow{
+  background-image: url(../icons/arrow.svg);
+  width: 24px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.more-icon{
+  background-image: url(../icons/more.svg);
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.arrow-back{
+  background-image: url(../icons/arrow-back.svg);
+  width: 36px;
+  height: 36px;
+}

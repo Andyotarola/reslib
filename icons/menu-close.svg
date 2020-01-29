@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+
+  <g class="menu_close" id="menu_close">
+    <path d="M20,20 L 40 40 M 40 20 L 20 40"
+      stroke="#fff"
+      stroke-width="4"
+      stroke-linecap="round"
+      fill="none">
+    </path>
+  </g>
+
+</svg>

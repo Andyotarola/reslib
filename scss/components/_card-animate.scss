@@ -1,0 +1,95 @@
+.card-animate{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(300px, 1fr));
+  column-gap: .75rem;
+  row-gap: 1.3rem;
+  padding:0 .75rem;
+
+  &__item{
+    width: 100%;
+    position: relative;
+    height: 25rem;
+    transition: box-shadow 1s;
+    border: 2px solid $borderColor;
+  }
+  &__item:hover{
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.15);
+  }
+
+  &__front{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+  }
+
+  &__back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: var(--gray-color);
+    transition: clip-path .75s linear;
+    clip-path:circle(0 at bottom right);
+    padding:  2em 1em;
+  }
+
+  &__back--active{
+    clip-path:circle(100%);
+    z-index: var(--z-tooltip);
+  }
+
+  &__btn{
+    position: absolute;
+    width: 2rem;
+    height: 2rem;
+    right: 2%;
+    bottom: 2%;
+    border-radius: 50%;
+    background-image: url(../icons/more.svg);
+    background-color: #0096f8;
+    box-shadow:1px 1px 3px #282D31;
+    z-index: 1000;
+    cursor: pointer;
+  }
+
+  &__btn--active{
+    background-image: url(../icons/less.svg);
+  }
+
+
+  &__img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__description{
+    font-size: .9rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  &__link{
+    color: hsl(74, 100%, 50%);
+    border-bottom: 2px solid hsl(74, 100%, 50%);
+  }
+
+  &__title{
+    font-size: .95em;
+    border-bottom: 2px solid hsl(74, 100%, 50%);
+    margin-bottom: 5rem;
+    color: hsl(74, 100%, 50%);
+    letter-spacing: 1.35px;
+    font-weight: 900;
+  }
+
+
+  @include rwd(medium){
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+}
