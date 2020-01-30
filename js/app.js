@@ -2,6 +2,19 @@ const targets = document.querySelectorAll('[data-target]');
 let modal_backdrop = document.createElement('div');
 let btn_target_now = null;
 let toggles = Array.from(document.querySelectorAll('[data-toggle]'));
+const skeleton = Array.from(document.querySelectorAll('div[class="skeleton"]'));
+
+skeleton.forEach((item, i) => {
+  item.style.height = item.parentElement.offsetHeight + "px";
+});
+
+window.onload = ()=>{
+  skeleton.forEach((item, i) => {
+    item.style.opacity="0";
+    item.style.visibility="hidden";
+  });
+}
+
 
 toggles.forEach((el,i)=>{
   let toggle = el.getAttribute('data-toggle');
@@ -189,9 +202,17 @@ targets.forEach((el,i)=>{
     }
     if (toggle == 'card-flipped') {
       menu.classList.add('card-flipped__item--active');
+      let cards_back = Array.from(menu.children)
+      cards_back.forEach((item, i) => {
+        item.style.zIndex = "10"
+      });
+
       menu.addEventListener('click', (e)=>{
         if (e.target.getAttribute('data-dismiss')!=null ||  e.target.parentElement.getAttribute('data-dismiss') != null) {
           menu.classList.remove('card-flipped__item--active');
+          cards_back.forEach((item, i) => {
+            item.style.zIndex = "0"
+          });
         }
       })
     }

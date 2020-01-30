@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+
+    body{
+      margin: 0;
+    }
+
+    .contenido{
+      width: 100%;
+      height: 40vw;
+      overflow: hidden;
+      position: relative;
+    }
+    .banner{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-image: url(../icons/banner.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+    }
+    .content{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h1{
+      animation: start 1s cubic-bezier(0, 0.87, 0.26, 1.65);
+
+    }
+
+    @keyframes start {
+      from{
+        transform: scale(0);
+      }
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="contenido">
+
+    <div class="banner">
+
+    </div>
+    <div class="content">
+      <h1>Menu</h1>
+    </div>
+
+
+  </div>
+  <p>lorem</p>
+
+  <script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>

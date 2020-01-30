@@ -4,9 +4,6 @@
   width: 100%;
   top: 0;
 }
-
-
-
 .progress-bar{
   @extend %progress_bar;
   border-top:2px solid var(--secondary-color);
@@ -23,14 +20,12 @@
 
 }
 
-
-
 %preloader{
   width: 100px;
   height: 100px;
   border: 10px solid #eee;
   border-radius: 50%;
-  animation: 2s girar infinite;
+  animation: 2s girar infinite ease-in-out;
 }
 
 .preloader{
@@ -50,10 +45,8 @@
 
 }
 @keyframes girar {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
+
+  100%{
     transform: rotate(360deg);
   }
 }
