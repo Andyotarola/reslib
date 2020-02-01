@@ -189,6 +189,9 @@ targets.forEach((el,i)=>{
     if (toggle == 'menu-left') {
       menu.classList.add('menu-left__active');
     }
+    if (toggle == 'menu-collapse') {
+      menu.classList.toggle('menu-collapse--active');
+    }
     if(toggle == 'modal'){
       btn_target_now = btn_target;
       menu.classList.add('modal__show');
@@ -217,6 +220,55 @@ targets.forEach((el,i)=>{
       })
     }
   })
+
+  if (toggle == 'menu-collapse') {
+    let scrollYOld = 0;
+    window.addEventListener('scroll', ()=>{
+      if (innerWidth >= 1024) {
+        if (scrollY == 0) {
+          menu.parentElement.style.position = "static";
+          menu.parentElement.style.opacity = "1";
+        }else{
+          menu.parentElement.style.opacity = "0";
+          if (scrollY < scrollYOld) {
+            menu.parentElement.style.position = "fixed";
+            menu.parentElement.style.opacity = "1";
+          }
+          scrollYOld = scrollY;
+        }
+      }else{
+        menu.parentElement.style.opacity = "1";
+        if (scrollY > 0) {
+          menu.parentElement.style.position = "fixed";
+        }else{
+          menu.parentElement.style.position = "static";
+        }
+      }
+    });
+
+    window.addEventListener('click', (e)=>{
+      if (e.target.getAttribute('data-toggle') !== null) {
+        if (e.target.getAttribute('data-toggle').includes('menu-collapse__submenu')) {
+          let submenu = document.querySelector(e.target.getAttribute('data-target'));
+          if (submenu.offsetHeight != 0) {
+            submenu.style.height =  "0px";
+            e.target.style.transform = "rotate(90deg)";
+          }else{
+            submenu.style.height = submenu.scrollHeight + "px";
+            e.target.style.transform = "rotate(270deg)";
+          }
+
+        }
+      }
+      if (menu.classList.contains('menu-collapse--active')) {
+        if (!e.target.parentElement.parentElement.className.includes('menu-collapse')) {
+          console.log(e.target.className);
+          menu.classList.remove('menu-collapse--active');
+        }
+      }
+    })
+
+  }
 
   if (toggle == 'modal') {
     menu.addEventListener('click', (e)=>{

@@ -27,6 +27,16 @@
   cursor: pointer;
 }
 
+.arrow-bottom{
+  background-image: url(../icons/arrow.svg);
+  width: 24px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: rotate(90deg);
+}
+
 .more-icon{
   background-image: url(../icons/more.svg);
   width: 24px;
