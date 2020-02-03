@@ -7,7 +7,8 @@
         M 30 49 l -18 -18 h 9 v -20 h 18 v 20 h 9 z
         M 21 1 h 18 v 7 h -18 z
         "
-        stroke-linejoin="round">
+        stroke-linejoin="round"
+        fill="#fff">
 
     </path>
   </g>

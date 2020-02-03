@@ -3,6 +3,14 @@ let modal_backdrop = document.createElement('div');
 let btn_target_now = null;
 let toggles = Array.from(document.querySelectorAll('[data-toggle]'));
 const skeleton = Array.from(document.querySelectorAll('div[class="skeleton"]'));
+const file = document.querySelector('.form__file--input')!=null ?document.querySelector('.form__file--input') : '';
+const file_span = document.querySelector('.form__file--span') !=null ?document.querySelector('.form__file--span') : '';
+
+if (file!='' && file_span !='') {
+  file.addEventListener('change', ()=>{
+    file_span.textContent = file.files[0].name;
+  })
+}
 
 skeleton.forEach((item, i) => {
   item.style.height = item.parentElement.offsetHeight + "px";

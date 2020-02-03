@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Formularios</title>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <form class="form mt-1" method="post" action="./app.php">
+    <div class="flex jc--center">
+      <h2 class="text--small mb-1">Formulario  con label</h2>
+    </div>
+    <div class="form__group">
+      <div class="form__field">
+        <label class="form__label">Nombre: </label>
+        <input type="text" class="form__control">
+      </div>
+      <div class="form__field">
+        <label class="form__label">Apellido: </label>
+        <input type="text" class="form__control">
+      </div>
+    </div>
+
+    <div class="form__group">
+      <div class="form__field">
+        <label class="form__label">E-mail: </label>
+        <input type="text" class="form__control">
+      </div>
+      <div class="form__field">
+        <label class="form__label">Contraseña: </label>
+        <input type="password" class="form__control">
+      </div>
+    </div>
+    <div class="form__group">
+      <div class="form__field">
+        <label class="form__label">Direccion: </label>
+        <input type="text" class="form__control">
+      </div>
+      <div class="form__field">
+        <label class="form__label">Fecha Nacimiento: </label>
+        <input type="date" class="form__control">
+      </div>
+    </div>
+
+    <div class="form__field flex--column">
+      <span class="mb-1 text--primary text--small">Sexo</span>
+      <div class="form__radio">
+        <label class="form__radio--label">Hombre
+          <input type="radio" name="sexo" class="form__radio--input">
+          <span class="form__radio--span"></span>
+        </label>
+        <label class="form__radio--label">Mujer
+          <input type="radio" name="sexo" class="form__radio--input">
+          <span class="form__radio--span"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form__field flex--column">
+      <span class="mb-1 text--primary text--small">Habilidades</span>
+      <div class="form__checkbox">
+        <label class="form__checkbox--label">HTML5
+          <input type="checkbox" name="nda" class="form__checkbox--input">
+          <span class="form__checkbox--span"></span>
+        </label>
+        <label class="form__checkbox--label">Javascript
+          <input type="checkbox" name="nda" class="form__checkbox--input">
+          <span class="form__checkbox--span"></span>
+        </label>
+        <label class="form__checkbox--label">CSS3
+          <input type="checkbox" name="nda" class="form__checkbox--input">
+          <span class="form__checkbox--span"></span>
+        </label>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="form__file">
+        <button class="btn--primary form__file--btn">
+          <span class="form__file--span">Seleccionar Archivo</span>
+          <input type="file" class="form__file--input" accept="image/jpeg,image/x-png,image/jpg">
+        </button>
+      </div>
+
+    </div>
+
+    <div class="form__field">
+      <textarea name="name" rows="8" cols="80" class="form__control"></textarea>
+    </div>
+    <div class="form__field">
+      <input type="submit" value="Registrarme" class="btn btn--primary btn--block">
+    </div>
+
+  </form>
+
+  <div class="flex jc--center">
+    <h2 class="text--small pt-1 mb-1">Formulario solo</h2>
+  </div>
+
+  <form class="form mt-1" method="post">
+    <div class="form__group">
+      <div class="form__field">
+        <input type="text" class="form__control" placeholder="Nombre">
+      </div>
+      <div class="form__field">
+        <input type="text" class="form__control" placeholder="Apellido">
+      </div>
+    </div>
+
+    <div class="form__group">
+      <div class="form__field">
+        <input type="text" class="form__control" placeholder="E-mail">
+      </div>
+      <div class="form__field">
+        <input type="password" class="form__control" placeholder="Contraseña">
+      </div>
+    </div>
+
+    <div class="form__field">
+      <input type="text" class="form__control" placeholder="Direccion">
+    </div>
+    <div class="form__field flex--column">
+      <label for="" class="form__label mb-1">Fecha Nacimiento</label>
+      <input type="date" class="form__control w-100" placeholder="Fecha de Nacimiento">
+    </div>
+
+    <div class="form__field">
+      <textarea name="name" rows="8" cols="80" class="form__control"></textarea>
+    </div>
+    <div class="form__field">
+      <input type="text" value="Registrarme" class="btn btn--primary btn--block">
+    </div>
+
+  </form>
+
+  <script type="text/javascript" src="./js/app.js"></script>
+</body>
+</html>

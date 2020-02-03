@@ -30,7 +30,6 @@
     display: grid;
     height: 100%;
     grid-template-columns: repeat(12, 1fr);
-    min-width: 69vw;
     margin-left: 15vw;
     margin-right: 15vw;
 
@@ -55,6 +54,17 @@
 [class^="col"]{
   display: flex;
 }
+
+.col-center{
+  grid-column: 2 / span 10;
+  @include rwd(medium) {
+    grid-column: 3 / span 8;
+  }
+  @include rwd(large){
+    grid-column: 4 / span 6;
+  }
+}
+
 @for $i from 1 through 12{
   .col-sm-#{$i}{
     grid-column: span #{$i};
@@ -65,14 +75,6 @@
   .d-sm-none{
     display: none;
   }
-  @for $i from 1 through 12{
-    .os-sm-#{$i}{
-      margin-left: calc(#{$i}*(100vw / 12 ));
-    }
-    .pull-sm-#{$i}{
-      margin-right: calc(#{$i}*(100vw / 12 ));
-    }
-  }
 
 }
 
@@ -80,31 +82,12 @@
   .d-md-none{
     display: none;
   }
-
-  @for $i from 1 through 12{
-    .os-md-#{$i}{
-      margin-left: calc(#{$i}*(100vw / 12 ));
-    }
-    .pull-md-#{$i}{
-      margin-right: calc(#{$i}*(100vw / 12 ));
-    }
-  }
 }
 
 @include rwd(large){
   .d-lg-none{
     display: none;
   }
-
-  @for $i from 1 through 12{
-    .os-lg-#{$i}{
-      margin-left: calc(#{$i}*(100vw / 12 ));
-    }
-    .pull-lg-#{$i}{
-      margin-right: calc(#{$i}*(100vw / 12 ));
-    }
-  }
-
 }
 
 
@@ -163,6 +146,10 @@
 
 .ai--between{
   align-items:space-between;
+}
+
+.as--start{
+  align-self: flex-start;
 }
 
 .as--center{
@@ -290,5 +277,5 @@ $positions: top ,bottom ,left ,right;
   margin: 0;
 }
 .w-100{
-  width: 100%;
+  width: 100% !important;
 }
