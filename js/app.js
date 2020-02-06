@@ -100,9 +100,9 @@ toggles.forEach((el,i)=>{
     const content_items_width = ()=>{
       content_items.forEach((el,i)=>{
         content_items[i].style.width = innerWidth + 'px';
-      })
-      content_items.forEach((el,i)=>{
         translate_start[i] = -(innerWidth * i);
+        content.style.transform = `translatex(${translate_start[iter]}px)`;
+        content.style.transitionDuration = '0ms';
       })
     }
     content_items_width();
@@ -258,11 +258,11 @@ targets.forEach((el,i)=>{
       if (e.target.getAttribute('data-toggle') !== null) {
         if (e.target.getAttribute('data-toggle').includes('menu-collapse__submenu')) {
           let submenu = document.querySelector(e.target.getAttribute('data-target'));
-          if (submenu.offsetHeight != 0) {
-            submenu.style.height =  "0px";
+          if (submenu.style.maxHeight) {
+            submenu.style.maxHeight = null;
             e.target.style.transform = "rotate(90deg)";
           }else{
-            submenu.style.height = submenu.scrollHeight + "px";
+            submenu.style.maxHeight = submenu.scrollHeight + "px";
             e.target.style.transform = "rotate(270deg)";
           }
 
@@ -270,7 +270,6 @@ targets.forEach((el,i)=>{
       }
       if (menu.classList.contains('menu-collapse--active')) {
         if (!e.target.parentElement.parentElement.className.includes('menu-collapse')) {
-          console.log(e.target.className);
           menu.classList.remove('menu-collapse--active');
         }
       }
