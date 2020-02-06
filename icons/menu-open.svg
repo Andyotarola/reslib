@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
-  <g class="menu_open" id="menu_open">
-    <rect x="2" y="0" width="56" height="8"/>
-    <rect x="2" y="21" width="56" height="8"/>
-    <rect x="2" y="44" width="56" height="8"/>
+  <g class="menu_open" id="menu_open" fill="#545b62">
+    <rect x="2" y="0" width="56" height="8" rx="4" ry="4"/>
+    <rect x="2" y="21" width="56" height="8" rx="4" ry="4"/>
+    <rect x="2" y="44" width="56" height="8" rx="4" ry="4"/>
   </g>
 </svg>
