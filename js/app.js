@@ -183,6 +183,30 @@ toggles.forEach((el,i)=>{
       e.preventDefault();
     })
   }
+
+  if (toggle == 'acordion') {
+    const acordion_items = Array.from(el.children);
+    acordion_items.forEach((item, i) => {
+      const acordion_btn = item.firstElementChild;
+      acordion_btn.addEventListener('click', ()=>{
+        const acordion_content = item.lastElementChild;
+        const acordion_description = acordion_content.children[0];
+        acordion_items.forEach((el,index) =>{
+          if (i!=index) {
+            el.lastElementChild.style.maxHeight = null;
+          }
+        })
+        if (acordion_content.style.maxHeight) {
+          acordion_content.style.maxHeight = null;
+        }else{
+          acordion_content.style.maxHeight = acordion_description.offsetHeight + "px";
+        }
+      })
+
+    });
+
+  }
+
 })
 
 targets.forEach((el,i)=>{

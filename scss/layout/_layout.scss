@@ -8,6 +8,7 @@
   grid-auto-flow: row dense;
   row-gap: 2rem;
   column-gap: 1rem;
+  padding: .5em;
 
   @include rwd(medium){
     width: 70vw;
