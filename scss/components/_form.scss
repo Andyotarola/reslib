@@ -14,7 +14,10 @@ input[type="file"]{
   color: #000;
   width: 100%;
 }
+
+
 .form{
+
   margin:0 auto;
   width: 94vw;
   border: 1px solid $borderColor;
@@ -58,14 +61,14 @@ input[type="file"]{
   }
 
   &__checkbox--input:focus + &__checkbox--span{
-    border: 1.5px #0087df solid !important;
+    border: 1.5px #26a69a solid;
   }
 
   &__checkbox--input:checked + &__checkbox--span{
     border: 1.5px #26a69a solid;
     background-color:#26a69a;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
   }
 
   &__checkbox--input:checked + &__checkbox--span:after{
@@ -107,7 +110,7 @@ input[type="file"]{
     align-items: center;
   }
   &__radio--input:focus + &__radio--span{
-    border: 2px #0087df solid !important;
+    border: 2px #26a69a solid;
   }
   &__radio--input:checked + &__radio--span:after{
     content: '';
