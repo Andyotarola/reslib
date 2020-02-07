@@ -43,6 +43,8 @@
     color: #fff;
     padding:  2em 1em;
     background: var(--gray-color);
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
   }
   &__btn{
     align-self: flex-end;
@@ -54,8 +56,6 @@
 
   }
   &__content{
-    transform: rotateY(180deg);
-    -webkit-transform:rotateY(180deg);
     height: 100%;
     width: 100%;
     display: flex;

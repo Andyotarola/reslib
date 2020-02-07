@@ -237,17 +237,9 @@ targets.forEach((el,i)=>{
     }
     if (toggle == 'card-flipped') {
       menu.classList.add('card-flipped__item--active');
-      let cards_back = Array.from(menu.children)
-      cards_back.forEach((item, i) => {
-        item.style.zIndex = "10"
-      });
-
       menu.addEventListener('click', (e)=>{
         if (e.target.getAttribute('data-dismiss')!=null ||  e.target.parentElement.getAttribute('data-dismiss') != null) {
           menu.classList.remove('card-flipped__item--active');
-          cards_back.forEach((item, i) => {
-            item.style.zIndex = "0"
-          });
         }
       })
     }
