@@ -1,5 +1,5 @@
 {
-  "name": "framework",
+  "name": "reslib",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Andyotarola/framework.git"
+    "url": "git+https://github.com/Andyotarola/reslib.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Andyotarola/framework/issues"
+    "url": "https://github.com/Andyotarola/reslib/issues"
   },
-  "homepage": "https://github.com/Andyotarola/framework#readme",
+  "homepage": "https://github.com/Andyotarola/reslib#readme",
   "dependencies": {
     "@babel/core": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
